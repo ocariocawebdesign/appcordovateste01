@@ -4,11 +4,11 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
-    <name>HelloCordova</name>
+    <name>AppBurger WhatsappLink</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+       App para lanchonete Burgers
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
+    <author email="ocariocawebdesign@gmaiç.com" href="http://ocariocawebdesign.com">
         Apache Cordova Team
     </author>
     <content src="index.html" />
