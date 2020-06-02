@@ -18,8 +18,9 @@
     under the License.
 -->
 <html>
-    <head>
-        <!--
+
+<head>
+    <!--
         Customize this policy to fit your own app's needs. For more guidance, see:
             https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
         Some notes:
@@ -28,22 +29,217 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    
+    <title>App</title>
+</head>
+
+<body>
+    <div class="app">
+        <h1>App Delivery Whatsapp</h1>
+        <div id="deviceready" class="">
+            <!--<p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>-->
+            <div class="container" style="padding: 2rem;">
+                <img class="pull-left" src="img/logo.png" alt="">
+
+                <h1 class="text-center" style="color:#3e3e3e; font-size: 20pt;"></h1>
+                
+                <div class="row">
+
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="border: 1px solid #e9e6e6; padding:0.5rem;">
+
+                        <div class="container">
+                            <img class="img-thumbnail" src="img/hamburguer-artesanal.jpg" alt="">
+
+                            <div class="text-danger" id="resRad"
+                                style="font-weight:bold; font-size:10pt; padding: 1rem;">
+                                <p style="font-size: 1rem;
+                                    font-weight: bold;
+                                    line-height: 1.5;
+                                    color: #212529;
+                                    text-align: left;">Extra Cheese Burguer Artesanal </p>
+                                <p style="font-size: 0.80rem; line-height: 1rem; font-weight:bold; color: #717171;">
+                                    Delicioso hamburguer artesanal<br><span
+                                        style="font-size:16px;color:rgb(177, 46, 46);">Novidade na Burguer
+                                        Classic</span></p>
+                            </div>
+                        </div>
+
+                        <div class=" container text-danger" style="font-weight:bold; font-size:18pt; padding: 1rem;"
+                            id="res">
+                        </div>
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-danger pull-right" data-toggle="modal"
+                            data-target="#modal">Fazer
+                            pedido</button>
+                        <a href="#" type="reset" value="delete"><button class="btn btn-primary pull-right"">Limpar</button></a>
+            
+                    <!-- Modal -->
+                    <div class=" modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <img class="img-fluid" src="img/logoBurguer.png" alt="">
+                                            <h5 class="modal-title" id="modalLabel"></h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container" style="padding: 2rem;">
+                                                <h1></h1>
+
+                                                <div class="row">
+
+                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
+                                                        style="border: 1px solid #e9e6e6; padding:1rem;">
+                                                        <div class="container">
+                                                            <img class="img-thumbnail"
+                                                                src="img/hamburguer-artesanal.jpg" alt="">
+                                                            <form name="form01" class="" action="#" method="">
+
+                                                                <p style="font-size: 1.125rem; font-weight: 500; color: #3e3e3e; ">
+                                                                    <h5>Extra Cheese Burguer Artesanal</h5><br>
+                                                                    <p style="font-size:16px;color:rgb(177, 46, 46);">
+                                                                        Queijo
+                                                                        brie, mostarda com mel, molho
+                                                                        especial, salada verde e fatias de presunto de
+                                                                        parma
+                                                                    </p>
+
+                                                                    <p style="color: #50a773; font-size: 0.875rem;">R$
+                                                                        17,00
+                                                                        <span style="font-size: 0.75rem;color: #dbdad9; text-decoration: line-through; margin-left: 6px;">R$21,00</span>
+                                                                    </p>
+
+                                                                    <h6>Escolha o tipo de carne:</h6>
+                                                                    
+                                                                    <select id="sabor" class="" name="Sabor"
+                                                                        data-attribute_name="attribute_escolha-o-sabor"
+                                                                        data-show_option_none="yes">
+
+                                                                        <option value="" selected>Escolha uma opção
+                                                                        </option>
+                                                                        <option value="Hamburguer de picanha"
+                                                                            class="attached enabled">Hamburguer de
+                                                                            picanha
+                                                                        </option>
+                                                                        <option value="Hamburguer de filé mingnon"
+                                                                            class="attached enabled">
+                                                                            Hamburguer de filé mingnon
+                                                                        </option>
+                                                                    </select>
+                                                                    <br>
+                                                                    <br>
+                                                                    <p class=""
+                                                                        style="font-weight:bold; font-size:18pt; padding: 1rem;">
+                                                                        Adicionais:
+                                                                    </p>
+
+                                                                    <div>
+                                                                        <input type="radio" id="escolha01"
+                                                                            name="Adicional" value="queijo">
+                                                                        <label class="labelAdicionais" for="escolha01">+
+                                                                            Queijo</label>
+                                                                        <br>
+                                                                        <input type="radio" id="escolha02"
+                                                                            name="Adicional" value="Salsinha">
+                                                                        <label class="labelAdicionais" for="escolha02">+
+                                                                            Salsinha</label>
+                                                                        <br>
+                                                                        <input type="radio" id="escolha03"
+                                                                            name="Adicional" value="Cebola">
+                                                                        <label class="labelAdicionais" for="escolha03">
+                                                                            +
+                                                                            Cebola</label>
+                                                                    </div>
+                                                                    <br>
+                                                                    <div>
+
+                                                                        <br>
+                                                                        <label for="cliente"> Digite seu nome<span
+                                                                                style="color:red">*</span></label>
+                                                                        <input type="text" id="cliente" name="cliente"
+                                                                            placeholder="SEU NOME" required>
+                                                                        <br>
+                                                                        <label for="telefone"> Digite seu telefone<span
+                                                                                style="color:red">*</span></label>
+                                                                        <input type="tel" required
+                                                                            pattern="^\d{2}\d{5}\d{4}$" id="telefone"
+                                                                            name="telefone" placeholder="21XXXXXXXXX">
+                                                                        <br>
+                                                                        <label for="email">Digite seu email<span
+                                                                                style="color:red">*</span></label>
+                                                                        <input type="email" name="email" required
+                                                                            placeholder="nome@email.com">
+                                                                        <br>
+                                                                        <label for="endereco">Digite seu endereço<span
+                                                                                style="color:red">*</span></label>
+                                                                        <input type="text" id="endereco" name="endereco"
+                                                                            placeholder="SEU ENDEREÇO COMPLETO"
+                                                                            required>
+                                                                        <br>
+                                                                        <label for="cep">Digite seu CEP<span
+                                                                                style="color:red">*</span></label>
+                                                                        <input type="text" name="cep" id="cep" required
+                                                                            pattern="\d{5}?\d{3}"
+                                                                            placeholder="XXXXXXXX" />
+                                                                    </div>
+
+                                                                    <br>
+                                                                    <button class="btn btn-danger" type="submit">Confirmar</button>
+                                                            </form>
+                                                            <br>
+                                                            <div class="text-danger" id="resRad"
+                                                                style="font-weight:bold; font-size:12pt; padding: 1rem;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="" id="whatsapp-share-btt" rel="nofollow" target="_blank"><button
+                                                    class="btn btn-primary">Envia
+                                                    pedido</button> </a>
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Fechar</button>
+                                            <!--<button class="btn  btn-danger" type="submit">Fazer pedido</button>-->
+                                        </div>
+                                    </div>
+                                </div>
+
+                    </div>
+                    <!--Button trigger modal -->
+
+                </div>
+
+                </div>
             </div>
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+</body>
+
 </html>
