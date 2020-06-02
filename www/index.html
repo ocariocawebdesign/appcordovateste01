@@ -57,8 +57,10 @@ font-weight: bold;
 
 .labelAdicionais {
 
-font-size: 14px;
+font-size: 12px;
+color: darkred;
 }
+
 
 input[type='text'] {
 width: 105% !important;
@@ -195,7 +197,7 @@ padding: 1rem;
                                                                         data-attribute_name="attribute_escolha-o-sabor"
                                                                         data-show_option_none="yes">
 
-                                                                        <option value="" selected>Escolha uma opção
+                                                                        <option value="" selected required>Escolha uma opção
                                                                         </option>
                                                                         <option value="Hamburguer de picanha"
                                                                             class="attached enabled">Hamburguer de
@@ -213,22 +215,18 @@ padding: 1rem;
                                                                         Adicionais:
                                                                     </p>
 
-                                                                    <div>
-                                                                        <input type="radio" id="escolha01"
+                                                                    <div style="padding: 0;">
+                                                                        <input type="checkbox" id="escolha01"
                                                                             name="Adicional" value="queijo">
-                                                                        <label class="labelAdicionais" for="escolha01">+
-                                                                            Queijo</label>
-                                                                        <br>
-                                                                        <input type="radio" id="escolha02"
+                                                                        <label class="labelAdicionais" for="escolha01">Queijo</label>
+                                                                        
+                                                                        <input type="checkbox" id="escolha02"
                                                                             name="Adicional" value="Salsinha">
-                                                                        <label class="labelAdicionais" for="escolha02">+
-                                                                            Salsinha</label>
-                                                                        <br>
-                                                                        <input type="radio" id="escolha03"
+                                                                        <label class="labelAdicionais" for="escolha02">Salsinha</label>
+                                                                        
+                                                                        <input type="checkbox" id="escolha03"
                                                                             name="Adicional" value="Cebola">
-                                                                        <label class="labelAdicionais" for="escolha03">
-                                                                            +
-                                                                            Cebola</label>
+                                                                        <label class="labelAdicionais" for="escolha03">Cebola</label>
                                                                     </div>
                                                                     <br>
                                                                     <div>
